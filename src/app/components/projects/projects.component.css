@@ -1,0 +1,78 @@
+.services::-webkit-scrollbar-thumb, .projectsRow::-webkit-scrollbar-thumb{
+    color: darkcyan;
+}
+.services::-webkit-scrollbar, .projectsRow::-webkit-scrollbar{
+    display: none;
+    height: 0;
+}
+.media-object{
+    width: 35%;
+    min-width: 20rem;
+}
+.activeServiceHeader{
+    background-color: black;
+    padding-block: 2rem;
+    color: white;
+}
+.activeService{
+    width: 100vw;
+}
+.activeServiceDetails{
+    width: 76vw;
+    margin: 0 auto;
+}
+.blockItemBody{
+    padding-block: 1.2rem;
+}
+.blockItemHeader{
+    color: white;
+    font-weight: normal;
+    margin: 0 1rem;
+    padding: 0.4rem 0.2rem;
+    min-width: 20rem;
+    background-color: black;
+    
+}
+.blockItem{
+    margin: 0 auto;
+}
+.serviceRelatedImagesHeader{
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 5rem;
+    width: 100vw;     
+}
+.serviceRelatedImages{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-top: 3rem;
+    margin:  0 0 3rem 0;
+    width: 100vw;
+}
+.serviceRelatedImages::-webkit-scrollbar{
+    display: none;
+}
+.relatedImage{
+    display: inline-block;
+    width: 20rem;
+    border: 1px ridge black;
+    border-radius: 4px;
+    margin: 0.5rem 10px;
+    padding: 4px;
+}
+.relatedImage img{
+    margin: 0 auto;
+    margin-bottom: 4px;
+    width: 19rem;
+    height: 14.5rem;
+}
+.relatedImage .caption{
+    font-weight: lighter;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: rgb(231, 228, 228);
+    height: fit-content;
+}

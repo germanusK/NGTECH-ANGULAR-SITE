@@ -1,0 +1,85 @@
+.HeaderBox{
+    background-color: darkcyan;
+    color: white;
+    width: 100vw;
+}
+.nav-item{
+    font-size: x-large;
+    font-weight: bold;
+    /* border-bottom: 2px solid white; */
+    transform: skew(-20deg);
+    margin-inline: 0.4rem;
+}
+.nav-link{
+    text-decoration: none;
+    color: white;
+    transform: skew(20deg);
+}
+.nav-item:hover{
+    font-weight: normal;
+    border-inline: 2px solid white;
+    padding-inline: 0.15rem;
+    color: rgb(167, 191, 233);
+}
+
+ul{
+    align-content: right;
+    text-align: right;
+}
+.menuBox > div{
+    width: fit-content;
+    text-align: right;
+    align-self: flex-end;
+    /* background-color: pink; */
+}
+
+
+
+.pane{
+    width: 60%;
+    vertical-align: baseline;
+    float: right;
+    margin-right: 1rem;
+}
+.logo{
+    width: 6rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.headerBackground{
+    border-top: 1px solid white;
+    width: 100vw;
+    height: 30vw;
+    background-color: darkcyan;
+}
+@media screen and (max-width: 575px) {
+    .headerBackground{
+        height: fit-content;
+        min-height: 75vw;
+    }
+}
+.headerTextInfo{
+    height: fit-content;
+    vertical-align: baseline;
+    text-align: center;
+}
+.headerImage{
+    height: 96%;
+    vertical-align: middle;
+    display: flex;
+}
+.headerImage > img{
+    margin: 1rem auto;
+}
+
+.brandText{
+    font-size: 3vw;
+    color: white;
+    font-stretch: expanded;
+    margin-top: 22%;
+}
+.brandTextBigger{
+    font-size: 4.5vw;
+    font-weight: bold;
+}

@@ -1,0 +1,22 @@
+.contactBox{
+    background-color: black;
+    transform: skew(-30deg);
+    width: fit-content;
+    color: white;
+    margin: 2rem auto;
+    padding-inline: 5vw;
+}
+.contactBox > *{
+    transform: skew(30deg);
+}
+.contactHeader{
+    font-size: x-large;
+    font-weight: bold;
+    width: 100vw;
+}
+.contactIcon{
+    width: 12rem;
+}
+.contactItem{
+    border-bottom: 1px solid white;
+}

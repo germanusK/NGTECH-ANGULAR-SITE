@@ -1,0 +1,52 @@
+.footerFrame{
+    height: fit-content;
+    /* min-height: 24rem; */
+    border-top: 1px solid white;
+    background-color: darkcyan;
+    color: white;
+}
+.footerTitle{
+    min-height: 3rem;
+    height: fit-content;
+    padding: 0.3rem;
+    /* background-color: black; */
+    margin-inline: auto;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border-bottom: 2px double white;
+}
+@media screen and (max-width: 575px) {
+    .footerTitle{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 300px) {
+    .footerTitle{
+        font-size: 0.5vw;
+    }
+}
+.otherFooterInfo{
+    padding-top: 1rem;
+}
+.contactIcon span{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1.2rem;
+    color: darkcyan;
+    padding: 6px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 4px auto;
+    font-weight: bolder;
+}
+.contactIcon{
+    border: 1px solid white;
+    border-width: 1px 0;
+}
+.chatBox button{
+    background-color: white;
+    color: darkcyan;
+    font-weight: bold;
+}

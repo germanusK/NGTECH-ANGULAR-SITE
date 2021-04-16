@@ -1,0 +1,104 @@
+.sideImage{
+    margin: 0.4rem 10px;
+}
+.textInfo{
+    padding: 0.6rem 10px;
+    padding-bottom: 3.5rem;
+    text-overflow: ellipsis;
+    font-size: large;
+    border-bottom: 2px solid darkcyan;
+}
+.media{
+    margin: 2rem 5px;
+    background: linear-gradient(to bottom right, rgb(136, 238, 238) 0% 25%, white 30%);
+}
+.media-heading{
+    font-size: x-large;
+    font-weight: bold;
+}
+.media-object{
+    max-width: 30%;
+    overflow-x: hidden;
+}
+.contactIcon{
+    border: 1px solid white;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    background-color: darkcyan;
+    color: white;
+    font-size: large;
+}
+ul li{
+    list-style-type: none;
+    align-self: baseline;
+    margin-inline: 0.5rem;
+}
+ul{
+    vertical-align: baseline;
+    display: flex;
+}
+.serviceItem {
+    width: 15rem;
+    margin: 0.4rem 0.4rem;
+    border-width: 0 1px;
+    background-color: transparent;
+}
+.serviceItem .container{
+    width: 80%;
+    margin: 0.3rem auto;
+}
+.serviceItem .caption{
+    height: 2rem;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .sideBar{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: none;
+    }
+    .sideBar::-webkit-scrollbar-thumb{
+        color: darkcyan;
+    }
+    .sideBar::-webkit-scrollbar{
+        display: none;
+        height: 0;
+    }
+    .sideBar .sideImage{
+        display: inline-block;
+    }
+}
+@media screen and (min-width: 768px) {
+    .services, .projectsRow{
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-snap-type: none;
+    }
+    .services .serviceItem, .projectsRow .serviceItem{
+        display: inline-block;
+    }
+    .services::-webkit-scrollbar-thumb, .projectsRow::-webkit-scrollbar-thumb{
+        color: darkcyan;
+    }
+    .services::-webkit-scrollbar, .projectsRow::-webkit-scrollbar{
+        display: none;
+        height: 0;
+    }
+
+}
+.serviceRelatedImagesHeader{
+    padding-top: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 5rem;
+    width: 100vw;  
+}

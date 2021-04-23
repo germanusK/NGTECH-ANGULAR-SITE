@@ -12,6 +12,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RouterModule } from '@angular/router';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     ServicesComponent,
     ProjectsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { RouterModule } from '@angular/router';
       {path: "services", component: ServicesComponent},
       {path: "projects", component: ProjectsComponent},
       {path: "contact", component: ContactComponent},
-      {path: "about", component: AboutComponent}
+      {path: "about", component: AboutComponent},
+      {path: "blog", component: BlogComponent}
     ])
   ],
   providers: [],

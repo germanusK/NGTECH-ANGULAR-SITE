@@ -1,0 +1,184 @@
+/* WHO WE ARE STYLING */
+.whoWeAreBlock{
+    height: fit-content;
+    padding-block: 2rem;
+}
+.whoWeAreBox{
+    height: fit-content;
+    width: 60%;
+    padding-block: 2rem;
+    background-color: var(--primaryColorBlack);
+    transform: skew(20deg);
+    margin: 1rem auto;
+}
+.whoWeAre{
+    transform: skew(-45deg);
+    width: 100%;
+    height: fit-content;
+    margin-left: 14%;
+    border: 2px solid var(--primaryColorBlack);
+    background-color: var(--primaryColorLightBlack);
+    padding: 2rem;
+    color: var(--primaryColorWhite);
+}
+.whoWeAre > *{
+    transform: skew(25deg);
+}
+.whoWeAreHeading{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: x-large;
+}
+/* TEAM STYLING */
+.teamHeading{
+    font-size: x-large;
+    font-weight: bold;
+    color: var(--primaryColorWhite);
+    padding-block: 1.5rem 0.5rem;
+    background-color: var(--primaryColorBlack);
+}
+.team{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: linear-gradient(to bottom, var(--primaryColorBlack) 0% 50%, var(--primaryColorWhite) 50%);
+    height: fit-content;
+    margin-bottom: 2rem;padding-inline: 1rem;
+}
+.team::-webkit-scrollbar{
+    display: none;
+}
+.teamMember{
+    display: inline-block;
+    width: 20rem;
+    margin: 8rem 0.8rem 1rem 0.8rem;
+    background-color: var(--primaryColorBlack);
+    border: 2px solid var(--primaryColorWhite);
+    border-radius: 5px;
+    padding: 5px;
+}
+.teamMember img{
+    width: 20rem;
+    height: 24rem;
+}
+.teamMemberPosition{
+    font-size: larger;
+}
+
+/* TEAM MEMBER INFORMATION */
+.memberInfoBlock{
+    background: linear-gradient(110deg, var(--primaryColorWhite) 0% 20%, var(--primaryColorBlack) 20.2% 20.6%, var(--primaryColorWhite) 20.8% 21.5%, var(--primaryColorBlack) 25%);
+    padding: 2.5rem auto;
+}
+
+.memberInfoHeader{
+    display: block;
+}
+.memberInfoHeader > div{
+    display: inline-block;
+}
+.memberInfoHeader .heading{
+    padding-inline: 5rem;
+    background-color: var(--primaryColorWhite);
+    border-radius: 0 5rem 5rem 0;
+    height: fit-content;
+    border-bottom: 1px solid var(--primaryColorBlack);
+    margin-top: 10rem;
+    width: 65%;
+}
+.profileImage{
+    right: 0;
+    width: 35%;
+    padding: 1rem auto;
+}
+.memberName, .memberPosition{
+    font-size: x-large;
+    font-weight: bold;
+}
+.profileImage .teamMember{
+    margin: 1rem;
+    padding-inline: 5px;
+}
+.relatedInfo{
+    border: 1px solid transparent;
+    border-radius: 1.5rem;
+    width: 60%;
+    padding: 2.5rem 1.5rem;
+    margin: 2.5rem 8rem 2rem auto;
+    background-color: var(--primaryColorLightBlack);
+    color: var(--primaryColorWhite);
+    font-size: larger;
+}
+@media screen and (max-width: 1088px) and (min-width: 568px) {
+    .whoWeAreBox{
+        transform: skew(12deg);
+    }
+    .whoWeAre{
+        transform: skew(-27deg);
+    }
+    .whoWeAre > *{
+        transform: skew(15deg);
+    }
+    .profileImage .teamMember{
+        width: fit-content;
+    }
+    .profileImage .teamMember img{
+        width: 40vw;
+        height: 40vw;
+    }
+    .memberInfoHeader .heading{
+        width: 55%;
+        text-align: right;
+        padding-inline: 1.5rem;
+    }
+    .memberName, .memberPosition{
+        font-size: larger;
+        font-weight: bold;
+    }
+    .relatedInfo{
+        width: 80%;
+        margin: 2.5rem 1rem 2rem auto;
+    }
+}
+@media screen and (max-width: 567px) {
+    .whoWeAreBox{
+        transform: skew(6deg);
+    }
+    .whoWeAre{
+        transform: skew(-14deg);
+    }
+    .whoWeAre > *{
+        transform: skew(8deg);
+    }
+    .memberInfoHeader{
+        padding-left: 19%;
+        padding-top: 2rem;
+    }
+    .profileImage{
+        display: block;
+        width: 100vw;
+    }
+    .profileImage .teamMember{
+        width: fit-content;
+        margin: 1rem auto;
+    }
+    .profileImage .teamMember img{
+        width: 50vw;
+        height: 60vw;
+        display: block;
+    }
+    .memberInfoHeader .heading{
+        text-align: right;
+        padding-inline: 0.5rem;
+        display: block;
+        margin-top: 2.5rem;
+    }
+    .memberName, .memberPosition{
+        font-size: large;
+        font-weight: bold;
+    }
+    .relatedInfo{
+        width: 80%;
+        margin: 2.5rem 1rem 2rem auto;
+    }
+}

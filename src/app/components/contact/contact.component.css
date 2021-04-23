@@ -1,8 +1,8 @@
 .contactBox{
-    background-color: black;
+    background-color: var(--primaryColorBlack);
     transform: skew(-30deg);
     width: fit-content;
-    color: white;
+    color: var(--primaryColorWhite);
     margin: 2rem auto;
     padding-inline: 5vw;
 }
@@ -18,5 +18,29 @@
     width: 12rem;
 }
 .contactItem{
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--primaryColorWhite);
+}
+@media screen and (min-width: 968px) and (max-width: 1267px) {
+    .contactBox{
+        transform: skew(-16deg);
+    }
+    .contactBox > *{
+        transform: skew(16deg);
+    }
+}
+@media screen and (max-width: 967px) {
+    .contactBox{
+        transform: skew(-3deg);
+        background-color: var(--primaryColorWhite);
+        width: 80vw;
+    }
+    .contactBox > *{
+        transform: skew(13deg);
+        background-color: var(--primaryColorBlack);
+        padding-left: 5vw;
+    }
+    .contactBox > * > *{
+        transform: skew(-10deg);
+        padding-inline: 1rem;
+    }
 }

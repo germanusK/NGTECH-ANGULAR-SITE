@@ -1,0 +1,95 @@
+<!-- HEADING OF THE BLOG PAGE -->
+<div class="blogHeader text-center">NGINYA BLOG</div>
+
+<!-- BLOG LAYOUT PROPPER -->
+<div class="blogBox row">
+    <!-- Controls for filtering and sorting posts -->
+    <div class="col-md-3 blogControlsPane">
+        <!-- Filtering view -->
+        <form action="" class="form filteringForm row" name="filteringForm" method="post">
+            <div class="form-group form-control col-sm-5 col-md-12 col-lg-5 text-right">
+                <label for="filterCheck">Filter posts :</label>
+                <input type="checkbox" name="filterCheck" id="" (change)="filterChecked($event)">
+            </div>
+            <div *ngIf="filterCheck" class="filterOptions col-md-12 col-sm-7 col-lg-7">
+                <!-- Date filter -->
+                <div class="my-1">
+                    <label for="dateFilterCheck">By Date :</label>
+                    <input type="checkbox" name="dateFilterCheck" id="" (change)="filterParameterChecked($event)">
+                    <div *ngIf="filterByDate" class="container-fluid">
+                        <span>from:</span><input type="date" name="filterDateFrom" id="" placeholder="From" class="ml-1 field">
+                        <span>to:</span><input type="date" name="filterDateTo" id="" placeholder="To" class="ml-1 field">
+                    </div>
+                </div>
+                <!-- Writer filter -->
+                <div class="form-group my-1">
+                    <label for="writerFilterCheck">By Writer :</label>
+                    <input type="checkbox" name="writerFilterCheck" id="" (change)="filterParameterChecked($event)">
+                    <select *ngIf="filterByWriter" name="filterWriter" id="" class="ml-1 field form-group">
+                        <option value="none" selected>Select writer</option>
+                    </select>
+                </div>
+                <!-- Category filter -->
+                <div class="form-group my-1">
+                    <label for="categoryFilterCheck">By Category :</label>
+                    <input type="checkbox" name="categoryFilterCheck" id="" (change)="filterParameterChecked($event)">
+                    <select *ngIf="filterByCategory" name="filterCategory" id="" class="ml-1 field">
+                        <option value="none">Select category</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <hr>
+
+        <!-- Sort posts; Can use similar view as above -->
+        <form action="" class="form sortingForm row" name="sortingForm" method="post">
+            <div class="form-group form-control text-right col-sm-5 col-md-12 col-lg-5 col-md-12">
+                <label for="sortCheck">Sort posts :</label>
+                <input type="checkbox" name="sortCheck" id="" (change)="sortChecked($event)">
+            </div>
+            <div *ngIf="sortCheck" class="sortOptions col-md-12 col-sm-7 col-lg-7">
+                <!-- Date filter -->
+                <div class="my-1">
+                    <label for="dateSortCheck">By Date :</label>
+                    <input type="checkbox" name="dateSortCheck" id="" (change)="sortParameterChecked($event)">
+                </div>
+                <!-- Writer filter -->
+                <div class="my-1">
+                    <label for="writerSortCheck">By Writer :</label>
+                    <input type="checkbox" name="writerSortCheck" id="" (change)="sortParameterChecked($event)">
+                </div>
+                    <!-- Category filter -->
+                <div class="my-1">
+                    <label for="categorySortCheck">By Category</label>
+                    <input type="checkbox" name="categorySortCheck" id="" (change)="sortParameterChecked($event)">
+                </div>
+            </div>
+        </form>
+        <hr>
+    </div>
+    <!-- Display area for posts -->
+    <div class="col-md-9 blogViewPane">
+        <div class="blogViewBox">
+            <div *ngFor="let el of abitraryArray" class="blogItem">
+                <div class="container-fluid row blogItemUpper">
+                    <div class="blogDetails col-sm-4 text-center">
+                        <div class="title">Blog title</div>
+                        <div class="writer">Blog writer</div>
+                        <div class="date">Blog date</div>
+                    </div>
+                    <div class="blogData col-sm-8">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus reprehenderit suscipit praesentium obcaecati delectus? In tempore pariatur aliquam iusto repellat, qui provident odio cum ut laborum ab itaque veniam et!
+                    </div>
+                </div>
+                <div class="blogItemLower container-fluid">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita numquam explicabo consequatur, doloribus soluta a laboriosam sapiente nihil error cupiditate atque suscipit sint ipsum, eveniet id porro accusamus saepe perferendis?
+                </div>
+                <div class="blogItemUserResponse mt-2 p-2 bg-dark text-white rounded">
+                    <label for="response text-primary">User reactions:</label>
+                    <div class="response">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

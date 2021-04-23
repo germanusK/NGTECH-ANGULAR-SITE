@@ -1,0 +1,56 @@
+.blogHeader{
+    font-size: xx-large;
+    font-weight: bold;
+    padding-block: 2rem;
+}
+.form-control{
+    border-color: transparent;
+    border-radius: 0;
+    padding-inline: 0;
+    margin-inline: 0;
+}
+.field{
+    border: none;
+    border-bottom: 1px solid var(--primaryColorGray);
+}
+.sortOptions, .filterOptions{
+    border-left: 1px solid var(--primaryColorWhite);
+    border-radius: 5px;
+}
+.form{
+    background-color: rgb(245, 245, 245);
+}
+.form *{
+    background-color: transparent;
+}
+
+/* Blog item styles */
+.blogItem{
+    background-color: var(--primaryColorBlack);
+    border: 1px solid transparent;
+    padding: 1rem;
+    color: var(--primaryColorWhite);
+    border-radius: 10px;
+    margin-block: 0.2rem;
+}
+.blogItemUpper{
+    margin-bottom: 0.6rem;
+}
+.blogItemUpper .blogDetails, .blogItemUpper .blogData{
+    padding: 0.4rem;
+    background-color: var(--primaryColorGray);
+    border-radius: 7px;
+    border-inline: 0.2rem solid;
+}
+.blogItemUpper .blogDetails .title{
+    font-size: larger;
+    font-weight: bold;
+}
+.blogItemUpper .blogDetails .writer{
+    font-size: medium;
+}
+.blogItemUpper .blogDetails .date{
+    font-size: small;
+    text-decoration-thickness: thin;
+    font-style: italic;
+}

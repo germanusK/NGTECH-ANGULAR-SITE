@@ -5,3 +5,13 @@
 @import url('../node_modules/@fortawesome/fontawesome-free/css/regular.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.css');
+
+:root{
+    --primaryColorDarkBlue: rgb(4, 4, 44);
+    --primaryColorBlue: blue;
+    --primaryColorBlack: black;
+    --primaryColorGray: gray;
+    --primaryColorLightBlack: rgb(54, 54, 54);
+    --primaryColorWhite: white;
+    --primaryColorSkyblue: skyblue;
+}

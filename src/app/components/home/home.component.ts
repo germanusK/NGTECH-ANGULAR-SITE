@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
   `Ensuring our services are accessible/usable within most population groups, even the less priveledged.`
 ]
 ourValues = [`High standard delivery at affordable rates is our fashion. The best is what we give you`,
-`Quality working standards to maximize productivity`, `Our integrity being maintained is a must-do`]
+`Quality working standards to maximize productivity`, `Our integrity being maintained is a must-do`];
+
+  projects = [1,1,1,1,1,1,1,1];
   constructor() { }
 
   ngOnInit(): void {

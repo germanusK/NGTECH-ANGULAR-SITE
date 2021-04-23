@@ -1,9 +1,9 @@
 .footerFrame{
     height: fit-content;
     /* min-height: 24rem; */
-    border-top: 1px solid white;
-    background-color: darkcyan;
-    color: white;
+    border-top: 1px solid var(--primaryColorWhite);
+    background-color: var(--primaryColorDarkBlue);
+    color: var(--primaryColorWhite);
 }
 .footerTitle{
     min-height: 3rem;
@@ -14,7 +14,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: bold;
-    border-bottom: 2px double white;
+    border-bottom: 2px double var(--primaryColorWhite);
 }
 @media screen and (max-width: 575px) {
     .footerTitle{
@@ -33,20 +33,20 @@
     height: fit-content;
     width: fit-content;
     font-size: 1.2rem;
-    color: darkcyan;
+    color: var(--primaryColorDarkBlue);
     padding: 6px;
-    background-color: white;
-    border: 1px solid white;
+    background-color: var(--primaryColorWhite);
+    border: 1px solid var(--primaryColorWhite);
     border-radius: 50%;
     margin: 4px auto;
     font-weight: bolder;
 }
 .contactIcon{
-    border: 1px solid white;
-    border-width: 1px 0;
+    border-bottom: 1px solid var(--primaryColorWhite);
+    overflow-wrap: break-word;
 }
 .chatBox button{
-    background-color: white;
-    color: darkcyan;
+    background-color: var(--primaryColorWhite);
+    color: var(--primaryColorDarkBlue);
     font-weight: bold;
 }

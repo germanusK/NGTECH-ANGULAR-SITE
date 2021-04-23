@@ -1,1 +1,40 @@
-<p>about works!</p>
+<!-- COMPANY RELATED INFORMATION; WHO WE ARE -->
+<div class="container-fluid whoWeAreBlock">
+    <div class="whoWeAreBox">
+        <div class="whoWeAre text-center">
+            <div class="whoWeAreHeading">Who We Are</div>
+            <div class="whoWeAreInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus quam dolores illo? Deleniti ducimus autem, mollitia amet quibusdam quo architecto libero ipsam. Porro, eveniet quos. Rerum nemo ratione delectus id.</div>
+        </div>
+    </div>
+</div>
+<!-- THE NGINYATECHNOLOGIES TEAM -->
+<div class="container-fluid teamBlock">
+    <div class="teamHeading text-center">Our Team</div>
+    <div class="team" data-toggle="tooltip" title="Scroll across team members; Click team member for more information">
+        <!-- TEAM MEMBERS -->
+        <div *ngFor="let member of team" class="teamMember text-white">
+            <div class="img-responsive">
+                <img src="../../../assets/images/office.jpg" alt="" class="img img-responsive img-thumbnail">
+            </div>
+            <div class="teamMemberPosition text-center">System Analyst</div>
+        </div>
+
+    </div>
+</div>
+<!-- TEAM MEMBER'S INFORMATION -->
+<div class="memberInfoBlock">
+    <div class="memberInfoHeader">
+        <div class="heading text-center">
+            <span class="memberName">Member's Name</span><br><i class="positionLabel">Position: </i>
+            <span class="memberPosition">Software Engineer</span>
+        </div>
+        <div class="profileImage">
+            <div class="teamMember text-white">
+                <div class="img-responsive">
+                    <img src="../../../assets/images/eef5addc3bf3c9a386ddf4d352c60272.jpg" alt="" class="img img-responsive img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="relatedInfo text-justified"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima, nulla harum, sit modi saepe mollitia totam corrupti quod beatae provident ad aut qui, voluptatibus architecto quae ducimus ipsam nesciunt. Non.</div>
+</div>

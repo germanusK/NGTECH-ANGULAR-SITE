@@ -1,6 +1,6 @@
 .HeaderBox{
-    background-color: darkcyan;
-    color: white;
+    background-color: var(--primaryColorDarkBlue);
+    color: var(--primaryColorWhite);
     width: 100vw;
 }
 .nav-item{
@@ -12,14 +12,14 @@
 }
 .nav-link{
     text-decoration: none;
-    color: white;
+    color: var(--primaryColorWhite);
     transform: skew(20deg);
 }
 .nav-item:hover{
     font-weight: normal;
-    border-inline: 2px solid white;
+    border-inline: 2px solid var(--primaryColorWhite);
     padding-inline: 0.15rem;
-    color: rgb(167, 191, 233);
+    color:var(--primaryColorGray);
 }
 
 ul{
@@ -43,15 +43,15 @@ ul{
 }
 .logo{
     width: 6rem;
-    height: 5rem;
+    height: 6rem;
     border-radius: 50%;
 }
 
 .headerBackground{
-    border-top: 1px solid white;
+    border-top: 1px solid var(--primaryColorWhite);
     width: 100vw;
     height: 30vw;
-    background-color: darkcyan;
+    background-color: var(--primaryColorDarkBlue);
 }
 @media screen and (max-width: 575px) {
     .headerBackground{
@@ -75,7 +75,7 @@ ul{
 
 .brandText{
     font-size: 3vw;
-    color: white;
+    color: var(--primaryColorWhite);
     font-stretch: expanded;
     margin-top: 22%;
 }

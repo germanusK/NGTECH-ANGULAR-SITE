@@ -4,62 +4,14 @@
 <div class="serviceRow" title="Click on a service for details" data-toggle="tooltip">
     <div class="media-left container-fluid">
         <div class="text-center services container-fluid">
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
+            <div *ngFor="let sevice of services" class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
                 <div class="container img-responsive img-responsive-4by3">
                     <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
                 </div>
                 <div class="text-center h5">Software Development</div>
                 <div class="caption text-center">Short service description</div>
             </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Software Development</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Software Development</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Software Development</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Software Development</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/software-developer-internships.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Internships</div>
-                <div class="caption text-center container-fluid">Short service description Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi provident excepturi laudantium reprehenderit voluptatum numquam assumenda eveniet molestiae blanditiis quasi. Modi, cumque culpa ratione incidunt accusamus repellat soluta. Soluta, officiis.</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/516e2fda94f0aec9abaf297e90033a38.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Training Programs</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
-            <div class="serviceItem d-inline-block img-responsive" (click)="showDetails($event)">
-                <div class="container img-responsive img-responsive-4by3">
-                    <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">
-                </div>
-                <div class="text-center h5">Others</div>
-                <div class="caption text-center">Short service description</div>
-            </div>
+            
         </div>
     </div>
 </div>
@@ -97,42 +49,12 @@
     <!-- RELATED IMAGES -->
     <div class="text-center mt-5 h4 text-white serviceRelatedImagesHeader">Other Related Services</div>
     <div class="serviceRelatedImages container-fluid">
-        <div class="relatedImage img-responsive img-responsive-4by3">
+        <div *ngFor="let other of services" class="relatedImage img-responsive img-responsive-4by3">
             <div class="container-fluid img-responsive img-responsive-4by3">
                 <img src="../../../assets/images/IMG_20201231_190950.jpg" alt="" class="img img-responsive img-thumbnail">
             </div>
             <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
         </div>
-        <div class="relatedImage img-responsive img-responsive-4by3">
-            <div class="container-fluid img-responsive img-responsive-4by3">
-                <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">
-            </div>
-            <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
-        </div>
-        <div class="relatedImage img-responsive img-responsive-4by3">
-            <div class="container-fluid img-responsive img-responsive-4by3">
-                <img src="../../../assets/images/task-board.jpg" alt="" class="img img-responsive img-thumbnail">
-            </div>
-            <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
-        </div>
-        <div class="relatedImage img-responsive img-responsive-4by3">
-            <div class="container-fluid img-responsive img-responsive-4by3">
-                <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">
-            </div>
-            <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
-        </div>
-        <div class="relatedImage img-responsive img-responsive-4by3">
-            <div class="container-fluid img-responsive img-responsive-4by3">
-                <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">
-            </div>
-            <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
-        </div>
-        <div class="relatedImage img-responsive img-responsive-4by3">
-            <div class="container-fluid img-responsive img-responsive-4by3">
-                <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">
-            </div>
-            <div class="caption container-fluid text-justified">Who they are, what they do. That's all officiis blanditiis, obcaecati est accusantium consectetur impedit rerum quisquam quis magnam commodi recusandae provident voluptatum delectus sit placeat sequi.</div>
-        </div>
-        
+                
     </div>
 </div>

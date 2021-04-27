@@ -13,6 +13,8 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { BlogComponent } from './components/blog/blog.component';
+import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { BlogComponent } from './components/blog/blog.component';
     ProjectsComponent,
     AboutComponent,
     ContactComponent,
-    BlogComponent
+    BlogComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { BlogComponent } from './components/blog/blog.component';
       {path: "projects", component: ProjectsComponent},
       {path: "contact", component: ContactComponent},
       {path: "about", component: AboutComponent},
-      {path: "blog", component: BlogComponent}
+      {path: "blog", component: BlogComponent},
+      {path: "login", component: LoginComponent},
+      {path: "signup", component: SignupComponent}
     ])
   ],
   providers: [],

@@ -1,0 +1,18 @@
+<div class="container-fluid row loginBox">
+    <div class="col-sm-5"></div>
+    <div class="col-sm-5 d-flex text-center formPane my-2">
+        <form action="" method="post" class="form loginForm pb-4">
+            <div class="container h4 my-4">User Login</div>
+            <input type="email" name="email" placeholder="Enter email" class="form-control my-1">
+            <input type="password" name="password" placeholder="Enter password" class="form-control my-1">
+            <div class="mt-3 container">
+                <span><a (click)="login()" class="mx-2">login</a></span>|
+                <span><a (click)="forgotPassword()" class="mx-1">forgot password</a></span>
+            </div>
+            <div class="container mx-auto mt-4 text-right">
+                <span><a routerLink="../signup" class="mx-1">Signup</a></span>
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+</div>

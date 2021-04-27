@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationBarComponent implements OnInit {
 
+  yes = false;
   constructor() { }
 
   ngOnInit(): void {
+    // !(document.getElementById("navigationMenu")).
+  }
+
+  toggleNavbar(){
+    this.yes = !this.yes;
+    if(this.yes){
+      document.getElementById("navigationMenu").classList.remove("collapse");
+    }
+    else{
+      document.getElementById("navigationMenu").classList.add("collapse");
+    }
   }
 
 }

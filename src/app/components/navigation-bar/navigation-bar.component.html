@@ -6,9 +6,9 @@
     </div>
     <div class="col-xs-9 col-sm-9 col-md-10 navbar navbar-expand-lg menuBox text-center">
         <div class="container pane">
-            <button class="btn navbar-toggler text-white bg-dark" type="button" data-target="#navigationMenu" data-toggler="collapse"><b><span>&gt;</span></b></button>
+            <button (click)="toggleNavbar()" class="btn navbar-toggler text-white bg-dark" type="button" data-target="#navigationMenu" data-toggler="collapse"><b><span class="fa fa-bars"></span></b></button>
             <div id="navigationMenu" class="collapse navbar-collapse">
-                <ul class="navbar-nav nav text-right">
+                <ul class="navbar-nav nav text-left">
                     <li class="nav-item d-block mx-1 px-2"><a routerLink="home" class="nav-link">Home</a></li>
                     <li class="nav-item d-block mx-1 px-2"><a routerLink="services" class="nav-link">Services</a></li>
                     <li class="nav-item d-block mx-1 px-2"><a routerLink="projects" class="nav-link">Projects</a></li>
@@ -24,7 +24,11 @@
 <!-- Header background -->
 <div class="headerBackground row">
     <div class="col-sm-7 headerTextInfo">
-        <div class="brandText"><span class="brandTextBigger">NGINYA TECHNOLOGIES <hr/></span><br>Creativity & Impact</div>
+        <div class="mx-auto container mt-5">
+            <span><a routerLink="signup" class="mx-2 my-1 btn btn-outline-info btn text-center">Signup</a></span>
+            <span><a routerLink="login" class=" mx-2 my-1 btn btn-outline-info text-center">Login</a></span>
+        </div>
+        <div class="brandText"><span class="brandTextBigger">NGINYA TECHNOLOGIES <hr/></span>Creativity & Impact</div>
     </div>
     <div class="col-sm-5 headerImage img-responsive">
         <img src="../../../assets/images/monitor-header-bg.jpg" alt="" class="img img-responsive img-thumbnail">

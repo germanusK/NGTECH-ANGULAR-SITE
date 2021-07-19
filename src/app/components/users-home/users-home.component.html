@@ -1,0 +1,150 @@
+<div class="row container-fluid text-center pt-5 mb-4">
+    <div class="col-sm-4 col-md-4 profileColumn text-center bg-primary">
+        <div class="d-inline">
+            <div class="profileImage ">
+                <div class="img-responsive img-responsive-4by3">
+                    <img src="../../../assets/images/image.jpg" alt="" class="img img-responsive rounded-circle" width="200">
+                </div>
+            </div>
+        </div>
+        <div class="userInfo d-block">
+            <!-- display key:value pairs for every other user information except profile image -->
+            <div *ngFor="let key of userKeys" class="row infoItem">
+                <div class="col-xs-4 col-md-3 col-sm-12 infoKey">{{key}}</div>
+                <div class="col-xs-8 col-sm-12 col-md-9 infoValue" data-toggle="tooltip" [title]="user[key]">{{user[key]}}</div>
+            </div>
+        </div>
+        <div class="justify-content-center">
+            <a class="btn btn-primary btn-sm mx-1" (click)="logoutUser()">logout</a>
+            <a class="btn btn-primary btn-sm mx-1" (click)="editProfile()">Edit profile</a>
+        </div>
+    </div>
+    <div class="col-sm-8 col-md-8 operationsColumn">
+        <div class="operationsHeader container-fluid text-right">
+            <!-- Show different navigations based on what role is logged in -->
+            <!--
+                For a basic user:
+                user can create, view and share links to collections(either of blog items, products&services)
+                user can subscribe for product updates and notifications
+             -->
+            <div *ngIf="user.role=='BASIC'" class="navbar navbar-light navbar-expand-sm justify-content-center animate_animated animate__rollIn">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navProper">
+                    <span class="fa fa-bars"></span>
+                    <span class="sr-only">Navbar Toggler</span>
+                </button>
+                <div id="navProper">
+                    <ul class="nav navbar-nav list-unstyled">
+                        
+                        <!-- Maintain an object for collections from backend{ item-types and id-arrays } -->
+                        <li class="nav-item"><a routerLink="./" (click)="setElement('Home')" data-toggle="tooltip" title="home"><span class="fa fa-home text-large"></span></a></li>
+                        <li class="nav-item"><a routerLink="./" (click)="setElement('Collections')" data-toggle="tooltip" title="collections"><span class="fa fa-list text-large"></span></a></li>
+                        <li class="nav-item"><a routerLink="./" data-toggle="tooltip" title="share"><span class="fa fa-share text-large"></span></a></li>
+                        <li class="nav-item"><a routerLink="">Subscribe</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- For a developer -->
+            <div *ngIf="user.role=='DEVELOPER'"  class="navbar navbar-light navbar-expand-sm justify-content-center animate_animated animate__rollIn">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navProper2">
+                    <span class="fa fa-bars"></span>
+                    <span class="sr-only">Navbar Toggler</span>
+                </button>
+                <div id="navProper2">
+                    <ul class="nav navbar-nav list-unstyled">
+                        <li class="nav-item" (click)="setElement('Home')" data-toggle="tooltip" title="home"><a routerLink="./"><span class="fa fa-home taxt-primary text-large"></span></a></li>
+                        <li class="nav-item dropdown dropdown-menu-right">
+                            <a class="dropdown-toggle dpMenuItemsToggler" data-toggle="dropdown" id="dpMenuItemsToggler" data-target="#dpMenuItems"><span class="fa fa-edit text-large text-primary"></span></a>
+                            <div class="dropdown-menu dropdown-menu1" id="dpMenuItems">
+                                <a class="dropdown-item" (click)="setElement('Blog')" routerLink="./postList">Blog</a>
+                            </div>
+                        </li>
+                        <li class="nav-item" (click)="setElement('Collections')" data-toggle="tooltip" title="collections"><a routerLink="./"><span class="fa fa-list taxt-primary text-large"></span></a></li>
+                        <li class="nav-item"><a routerLink="">Subscribe</a></li>
+                        <li class="nav-item" data-toggle="tooltip" title="share"><a routerLink=""><span class="fa fa-share taxt-primary text-large"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <!-- For a admin user -->
+            <div  *ngIf="user.role=='ADMIN'"  class="navbar navbar-light navbar-expand-sm justify-content-center animate_animated animate__rollIn">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navProper2">
+                    <span class="fa fa-bars"></span>
+                    <span class="sr-only">Navbar Toggler</span>
+                </button>
+                <div id="navProper2">
+                    <ul class="nav navbar-nav list-unstyled">
+                        <li class="nav-item"><a (click)="setElement('Home')" routerLink="."><span class="fa fa-home taxt-primary text-large"></span></a></li>
+                        <li class="nav-item dropdown dropdown-menu-right">
+                            <a class="dropdown-toggle dpMenuItemsToggler text-black" data-toggle="dropdown" id="dpMenuItemsToggler" data-target="#dpMenuItems"><span class="text-large fa fa-edit"></span></a>
+                            <div class="dropdown-menu dropdown-menu1" id="dpMenuItems">
+                                <a (click)="setElement('Products')" class="dropdown-item" routerLink="./productList">Products</a>
+                                <a (click)="setElement('Services')" class="dropdown-item" routerLink="./serviceList">Services</a>
+                                <a (click)="setElement('Blog')" class="dropdown-item" routerLink="./postList">Blog</a>
+                                <a (click)="setElement('About')" class="dropdown-item" routerLink="./aboutList">About</a>
+                                <a (click)="setElement('Contact')" class="dropdown-item" routerLink="./contactList">Contact</a>
+                                <a (click)="setElement('Users')" class="dropdown-item" routerLink="./usersList">Users</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown dropdown-menu-right">
+                            <a class="dropdown-toggle dpMenuItemsToggler2 text-black" data-toggle="tooltip" title="collections"><span class="fa fa-list text-large"></span></a>
+                            <div (click)="setElement('Collections')" class="dropdown-menu dropdown-menu2" id="dpMenuItems2">
+                                <a class="dropdown-item" routerLink="" >My Collections</a>
+                                <a class="dropdown-item" routerLink="" >New Collections</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a routerLink="">Subscribe</a></li>
+                        <li class="nav-item" data-toggle="tooltip" title="share"><a routerLink=""><span class="fa fa-share taxt-primary text-large"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <!-- For root user -->
+            <div  *ngIf="user.role=='ROOT'" class="navbar navbar-light navbar-expand-sm justify-content-center animate_animated animate__rollIn">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navProper2">
+                    <span class="fa fa-bars"></span>
+                    <span class="sr-only">Navbar Toggler</span>
+                </button>
+                <div id="navProper2">
+                    <ul class="nav navbar-nav list-unstyled">
+                        <li class="nav-item"><a (click)="setElement('Home')" routerLink="./"><span class="fa fa-home taxt-primary text-large"></span></a></li>
+                        <li class="nav-item dropdown dropdown-menu-right">
+                            <a class="dropdown-toggle dpMenuItemsToggler text-black" data-toggle="dropdown" id="dpMenuItemsToggler" data-target="#dpMenuItems"><span class="text-large fa fa-edit"></span></a>
+                            <div class="dropdown-menu dropdown-menu1" id="dpMenuItems">
+                                <a (click)="setElement('Products')" class="dropdown-item" routerLink="./productList">Products</a>
+                                <a (click)="setElement('Services')" class="dropdown-item" routerLink="./serviceList">Services</a>
+                                <a (click)="setElement('Blog')" class="dropdown-item" routerLink="./postList">Blog</a>
+                                <a (click)="setElement('About')" class="dropdown-item" routerLink="./aboutList">About</a>
+                                <a (click)="setElement('Contact')" class="dropdown-item" routerLink="./contactList">Contact</a>
+                                <a (click)="setElement('Users')" class="dropdown-item" routerLink="./usersList">Users</a>
+                            </div>
+                        </li>
+                        <li (click)="setElement('Collections')" class="nav-item dropdown dropdown-menu-right">
+                            <a class="dropdown-toggle dpMenuItemsToggler2 text-black" data-toggle="tooltip" title="collections"><span class="fa fa-list text-large"></span></a>
+                            <div class="dropdown-menu dropdown-menu2" id="dpMenuItems2">
+                                <a class="dropdown-item" routerLink="" >My Collections</a>
+                                <a class="dropdown-item" routerLink="" >New Collections</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a routerLink="">Subscribe</a></li>
+                        <li class="nav-item" data-toggle="tooltip" title="share"><a routerLink=""><span class="fa fa-share taxt-primary text-large"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <hr class="p-2 bg-light">    
+        </div>
+        <div class="userHome">
+            <div class="row">
+                <ul class="nav navbar-nav col-xs-2 col-sm-1 flex-column p-1">
+                    <div class="itemLabel h5 text-center">{{currentElement}}</div>
+                    <a (click)="newItem()" class="menu-item mt-1 p-1 " data-toggle="tooltip" title="new"><span class="text-larger fa fa-edit"></span></a>
+                    <a (click)="previewItem()" class="menu-item mt-1 p-1" data-toggle="tooltip" title="preview"><span class="text-larger fa fa-list"></span></a>
+                </ul>
+                <div class="col-xs-10 col-sm-11 col-md-11 justify-content-center">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

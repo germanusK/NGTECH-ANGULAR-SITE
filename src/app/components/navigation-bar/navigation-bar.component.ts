@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -8,10 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationBarComponent implements OnInit {
 
   yes = false;
-  constructor() { }
+  isNgtechUserLoggedIn = localStorage.getItem("ngtechSiteUserIsLoggedIn");
+  constructor(private router: Router, private service: MainService) { }
 
   ngOnInit(): void {
     // !(document.getElementById("navigationMenu")).
+    this.service.GET_SESSION_CHANGE().subscribe(sessionState=>{
+      if (sessionState) {
+        this.isNgtechUserLoggedIn = "true";
+      }else{
+        this.isNgtechUserLoggedIn = "false";
+      }
+      this.ngOnInit();
+    })
   }
 
   toggleNavbar(){
@@ -22,6 +33,12 @@ export class NavigationBarComponent implements OnInit {
     else{
       document.getElementById("navigationMenu").classList.add("collapse");
     }
+  }
+  logoutUser():void {
+    localStorage.removeItem("ngtechSiteUserSessionData");
+    localStorage.setItem("isNgtechUserLoggedIn", "false");
+    this.service.SET_SESSION_CHANGE(false);
+    this.router.navigate(["login"]);
   }
 
 }

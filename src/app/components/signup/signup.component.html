@@ -1,15 +1,25 @@
 <div class="container-fluid row loginBox">
     <div class="col-sm-5"></div>
     <div class="col-sm-5 d-flex text-center formPane my-2">
-        <form action="" method="post" class="form loginForm pb-4">
-            <div class="container h4 my-4">User Signup</div>
-            <input type="email" name="email" placeholder="Enter email" class="form-control my-1">
-            <input type="password" name="password" placeholder="Enter password" class="form-control my-1">
-            <input type="password" name="confirmPassword" placeholder="Re-enter password" class="form-control my-1">
-            <div class="mt-3 container">
-                <span><a (click)="signup()" class="mx-2">signup</a></span>
+        <form method="post" name="signupForm" class="form loginForm pb-4">
+            <div class="operationState row animate_animated animate_bounceInUp">
+                <div class="operationStateIcon col-xs-2 col-lg-2">
+                    <span *ngIf="operationState==1" class="fa fa-trophy text-success"></span>
+                    <span *ngIf="operationState==2" class="fa fa-exclamation-circle text-danger"></span>
+                </div>
+                <div class="operationStateText col-xs-10 col-lg-10">
+                    <span *ngIf="operationState==1" class="text-success">OPERATION COMPLETE</span>
+                    <span *ngIf="operationState==2" class="text-danger">OPERATION FAILED</span>
+                </div>
             </div>
-            <div class="container mx-auto mt-4 text-right">
+            <div class="container h4 my-4 animate_animated animate__bounceInRight">User Signup</div>
+            <input [(ngModel)]="email" type="email" name="email" placeholder="Enter email" class="form-control my-1 animate_animated animate_backInRight" required minlength="11">
+            <input [(ngModel)]="password" type="password" name="password" placeholder="Enter password" class="form-control my-1 animate_animated animate_backInRight" required minlength="8" maxlength="25">
+            <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder="Re-enter password" class="form-control my-1 animate_animated animate_backInRight" required minlength="8" maxlength="25" (keydown)="passwordChanged()" (paste)="passwordChanged()" (input)="passwordChanged()">
+            <div class="mt-3 container">
+                <span><input type="button" (click)="signup()" class="mx-2" value="Signup"></span>
+            </div>
+            <div class="container mx-auto mt-4 text-right animate_animated animate_zoomIn">
                 <span><a routerLink="../login" class="mx-1">Login</a></span>
             </div>
         </form>

@@ -1,0 +1,26 @@
+{
+    "PORT_NUMBER": 49161,
+    "END_POINTS": {
+        "ROOT": "/ng-tech-api",
+        "SERVICES": "/ng-tech-api/services",
+        "SERVICE_BY_ID": "/ng-tech-api/services/:_id",
+        "PROJECTS": "/ng-tech-api/projects",
+        "PROJECT_BY_ID": "/ng-tech-api/projects/:_id",
+        "CONTACTS": "/ng-tech-api/contacts",
+        "CONTACT_BY_ID": "/ng-tech-api/contacts/:_id",
+        "BLOGS": "/ng-tech-api/blogs",
+        "BLOG_BY_ID": "/ng-tech-api/blogs/:_id",
+        "ABOUT": "/ng-tech-api/about",
+        "ABOUT_BY_ID": "/ng-tech-api/about/:_id",
+        "TEAM": "/ng-tech-api/team",
+        "TEAM_MEMBER_BY_ID": "/ng-tech-api/team/:_id",
+        "TEXT_INFO": "/ng-tech-api/text",
+        "TEXT_INFO_BY_ID": "/ng-tech-api/text/:_id",
+        "UNSPECIFIED": "/ng-tech-api/unspecified",
+        "UNSPECIFIED_BY_ID": "/ng-tech-api/unspecified/:_id",
+        "USER": "/ng-tech-api/users",
+        "USER_LOGIN": "/ng-tech-api/users/login",
+        "USER_BY_ID": "/ng-tech-api/users/:_id",
+        "USER_FORGET_PASSWORD": "/ng-tech-api/users/forgetPassword/:email"
+    }
+}

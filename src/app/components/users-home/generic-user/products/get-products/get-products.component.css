@@ -1,0 +1,23 @@
+.dataItem{
+    display: inline-flex;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 15rem;
+}
+.dataItem *{
+    text-overflow: ellipsis;
+    word-wrap: nowrap;
+}
+.displayBox{
+    height: 13rem;
+}
+.dataAction{
+    color: var(--primaryColorBlue);
+    font-weight: bold;
+    /* font-size: n; */
+    background-color: white;
+    border: 1px solid var(--primaryColorBlue);
+    border-radius: 3px;
+    padding: 4px;
+    margin-inline: 3px;
+}

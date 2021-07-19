@@ -5,6 +5,7 @@
 @import url('../node_modules/@fortawesome/fontawesome-free/css/regular.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/solid.min.css');
 @import url('../node_modules/@fortawesome/fontawesome-free/css/all.css');
+@import url('../node_modules/animate.css/animate.min.css');
 
 :root{
     --primaryColorDarkBlue: rgb(4, 4, 44);
@@ -17,4 +18,8 @@
 }
 html, body {
     overflow-x: hidden;
+}
+.animate_animated{
+    animation-delay: 0s;
+    animation-duration: 1.2s;
 }

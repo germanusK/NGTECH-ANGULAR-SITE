@@ -17,6 +17,10 @@ input{
     border-color: var(--primaryColorBlack);
     border-radius: 0;
 }
+input[type='submit']{
+    border-color: transparent;
+    color: var(--primaryColorBlue);
+}
 .loginBox{
     background: url('../../../assets/images/luca-bravo-217276-unsplash.jpg');
     background-size: cover;

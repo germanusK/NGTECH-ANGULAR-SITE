@@ -23,6 +23,7 @@
 }
 .whoWeAre > *{
     transform: skew(25deg);
+    text-orientation: sideways;
 }
 .whoWeAreHeading{
     margin-bottom: 1rem;
@@ -143,6 +144,7 @@
 @media screen and (max-width: 567px) {
     .whoWeAreBox{
         transform: skew(6deg);
+        width: 90%;
     }
     .whoWeAre{
         transform: skew(-14deg);
@@ -166,6 +168,13 @@
         width: 50vw;
         height: 60vw;
         display: block;
+    }
+    .team .teamMember{
+        width: 75vw;
+    }
+    .team .teamMember img{
+        width: 75vw;
+        height: 85vw;
     }
     .memberInfoHeader .heading{
         text-align: right;

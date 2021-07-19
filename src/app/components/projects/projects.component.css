@@ -5,9 +5,18 @@
     display: none;
     height: 0;
 }
-.media-object{
-    width: 35%;
-    min-width: 20rem;
+.media-right .caption{
+    font-size: 1.4rem;
+    text-size-adjust: 75%;
+}
+@media screen and (max-width: 567px) {
+    .media{
+        display: flex;
+        align-content: center;
+    }
+    .media-right, .media-object{
+        display: inline-block;
+    }
 }
 .activeServiceHeader{
     background-color: var(--primaryColorBlack);
@@ -70,9 +79,17 @@
 }
 .relatedImage .caption{
     font-weight: lighter;
-    white-space: normal;
+    white-space: pre-wrap;
     overflow: hidden;
     text-overflow: ellipsis;
     background-color: rgb(231, 228, 228);
-    height: fit-content;
+    height: 5rem;
+}
+@media screen and (max-width: 567px) {
+    .relatedImage{
+        width: 85vw;
+    }
+    .relatedImage img{
+        width: 83vw;
+    }
 }

@@ -1,0 +1,11 @@
+<div class="mainBox">
+    <form action="" method="post" name="newPostForm" class="form newPostForm">
+        <input type="text" name="postTitle" class="input form-control" placeholder="Post title">
+        <textarea rows="3" name="postDescription" class="input form-control" placeholder="Post description"></textarea>
+        <textarea name="postData" rows="4" class=" input form-control" placeholder="Post data here"></textarea>
+        <div class="text-center">
+            <span (click)="cancelOperation()" class=" formAction fa fa-eraser">Cancel</span>
+            <span (click)="submitProduct()" class="formAction fa fa-save">Submit</span>
+        </div>
+    </form>
+</div>

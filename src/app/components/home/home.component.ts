@@ -15,14 +15,18 @@ export class HomeComponent implements OnInit {
   ourVision = [  `Becoming the customer's choice of a company to work with`,
   `Standing out among the top 15 software companies in Cameroon in the next five years`,
   `Ensuring our services are accessible/usable within most population groups, even the less priveledged.`
-]
-ourValues = [`High standard delivery at affordable rates is our fashion. The best is what we give you`,
+  ]
+  ourValues = [`High standard delivery at affordable rates is our fashion. The best is what we give you`,
 `Quality working standards to maximize productivity`, `Our integrity being maintained is a must-do`];
 
   projects = [1,1,1,1,1,1,1,1];
   constructor() { }
 
   ngOnInit(): void {
+    document.querySelectorAll(".media").forEach((node, key, nodeList)=>{
+      node.classList.add("animate_animated");
+      node.classList.add("animate_bounceIn");
+    })
   }
 
 }

@@ -1,0 +1,24 @@
+.newProductForm{
+    width: 50%;
+    min-width: 12rem;
+    padding: 0.4rem 1rem;
+    margin: 0.4rem auto;
+    border-radius: 0.6rem;
+    border: 1px solid var(--primaryColorBlack);
+    text-align: left;
+}
+.input{
+    display: inline-flex;
+    margin-left: 0.2rem;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--primaryColorBlack);
+}
+.formAction{
+    padding: 3px;
+    margin-inline: 3px;
+    border: 1px solid var(--primaryColorBlue);
+    border-radius: 3px;
+    color: var(--primaryColorBlue);
+    display: inline-flex;
+}

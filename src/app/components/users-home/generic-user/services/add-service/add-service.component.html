@@ -1,0 +1,27 @@
+<div class="mainBox">
+    <div class="h3 text-center mx-4">New Service</div><hr>
+    <form action="" method="post" class="form newProductForm" name="newProductForm">
+        <div class="form-group">
+            <input [(ngModel)]="serviceName" type="text" name="serviceName" class="input form-control" placeholder="Service name">
+        </div>
+        <div class="form-group">
+            <input [(ngModel)]="serviceTargetClients" type="text" name="serviceTargetClients" class="input form-control" placeholder="Target clients">
+        </div>
+        <div class="form-group"><!--Describes the problem solved by service-->
+            <input [(ngModel)]="serviceUse" type="text" name="serviceUse" class="input form-control" placeholder="Use of service">
+        </div>
+        <div class="form-group">
+             <textarea [(ngModel)]="serviceUsage" rows="3" type="text" name="serviceUsage" class="input form-control" placeholder="Usage"></textarea>
+        </div>
+        <div class="form-group">
+             <textarea [(ngModel)]="whyUseIt" rows="3" type="text" name="whyUseIt" class="input form-control" placeholder="Why use this service"></textarea>
+        </div>
+        <div class="form-group">
+             <input [(ngModel)]="detailedDocumentation" type="text" name="detailedDocumentation" class="input form-control" placeholder="Service documentation">
+        </div>
+        <div class="text-center">
+            <span (click)="cancelOperation()" class=" formAction fa fa-eraser">Cancel</span>
+            <span (click)="submitProduct()" class="formAction fa fa-save">Submit</span>
+        </div>
+    </form>
+</div>

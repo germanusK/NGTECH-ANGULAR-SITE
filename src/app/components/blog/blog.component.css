@@ -30,8 +30,8 @@
     border: 1px solid transparent;
     padding: 1rem;
     color: var(--primaryColorWhite);
-    border-radius: 10px;
-    margin-block: 0.2rem;
+    border-radius: 5px;
+    margin: 0.5rem 0.4rem;
 }
 .blogItemUpper{
     margin-bottom: 0.6rem;
@@ -39,7 +39,7 @@
 .blogItemUpper .blogDetails, .blogItemUpper .blogData{
     padding: 0.4rem;
     background-color: var(--primaryColorGray);
-    border-radius: 7px;
+    border-radius: 4px;
     border-inline: 0.2rem solid;
 }
 .blogItemUpper .blogDetails .title{
